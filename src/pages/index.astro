@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<div class="text-center">
+			<h1>Добро пожаловать в <span class="text-gradient">Implica</span> на экспресс курс по <span class="text-gradient">DevOps</span></h1>
+		</div>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://www.implica.ru/"
+				title="О компании"
+				body="Управление информационными технологиями — наша работа 😀"
+			/>
+			<Card
+				href="https://localhost:3000/"
+				title="О курсе"
+				body="🚀"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 85ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-center {
+		text-align: center;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
