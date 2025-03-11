@@ -19,3 +19,11 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# k8s files
+k8s/
+
+# terraform files
+.terraform*
+*.tfstate
+*.tfstate.backup

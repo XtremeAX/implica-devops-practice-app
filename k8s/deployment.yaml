@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    labels:
+        app: implica-web-app
+    name: implica-web-app
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: implica-web-app
+    strategy: {}
+    template:
+        metadata:
+            labels:
+                app: implica-web-app
+        spec:
+            containers:
+            - image: ghcr.io/xtremeax/implica-devops-webapp
+              name: implica-devops-webapp
+              resources: {}

@@ -1,0 +1,17 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+    labels:
+        app: implica-web-app
+    name: implica-web-app
+spec:
+    ports:
+        - name: http
+        port: 80
+        protocol: TCP
+        targetPort: 80
+    selector:
+        app: implica-web-app
+    type: LoadBalancer
+
